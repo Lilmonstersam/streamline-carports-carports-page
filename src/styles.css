@@ -1,0 +1,1009 @@
+@font-face {
+        font-family: "Alte Haas Grotesk";
+        src: url("https://streamlinecarports.kiwi/wp-content/uploads/2024/01/AlteHaasGroteskRegular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Alte Haas Grotesk";
+        src: url("https://streamlinecarports.kiwi/wp-content/uploads/2024/01/AlteHaasGroteskBold.woff2") format("woff2");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      :root {
+        --ink: #000000;
+        --charcoal: #262522;
+        --muted: #555251;
+        --line: #d8d6cc;
+        --paper: #ffffff;
+        --mist: #f0efef;
+        --stone: #eae7dc;
+        --accent: #c9c6b9;
+        --signal: #f58220;
+        --green: #004a59;
+        --max: 1180px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "Alte Haas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input {
+        font: inherit;
+      }
+
+      .page {
+        overflow: hidden;
+        padding-bottom: 88px;
+      }
+
+      .site-header {
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.96);
+        position: sticky;
+        top: 0;
+        z-index: 20;
+      }
+
+      .header-inner {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+        min-height: 86px;
+        display: grid;
+        grid-template-columns: 172px 1fr auto;
+        align-items: center;
+        gap: 26px;
+      }
+
+      .brand img {
+        width: 155px;
+        height: auto;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 26px;
+        color: var(--charcoal);
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .nav a {
+        border-bottom: 2px solid transparent;
+        padding: 8px 0;
+      }
+
+      .nav a:hover {
+        border-color: var(--accent);
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        align-items: center;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        border: 2px solid var(--ink);
+        background: transparent;
+        color: var(--ink);
+        padding: 13px 28px;
+        border-radius: 0;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+      }
+
+      .btn:hover {
+        background: var(--stone);
+        transform: translateY(-1px);
+      }
+
+      .btn.fill {
+        background: var(--accent);
+        border-color: var(--accent);
+      }
+
+      .btn.fill:hover {
+        background: var(--stone);
+      }
+
+      .btn.small {
+        min-height: 40px;
+        padding: 9px 18px;
+        font-size: 14px;
+      }
+
+      .mobile-menu {
+        display: none;
+        border: 0;
+        background: transparent;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .mobile-menu span {
+        display: block;
+        width: 28px;
+        height: 2px;
+        background: var(--ink);
+        margin: 6px 0;
+      }
+
+      .sticky-cta {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 40;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        background: var(--charcoal);
+        color: var(--paper);
+        box-shadow: 0 -18px 48px rgba(0, 0, 0, 0.18);
+      }
+
+      .sticky-cta-inner {
+        width: min(var(--max), calc(100% - 32px));
+        min-height: 88px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 24px;
+        align-items: center;
+      }
+
+      .sticky-cta-title {
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .sticky-cta-text {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 14px;
+      }
+
+      .sticky-cta .button-row {
+        flex-wrap: nowrap;
+      }
+
+      .sticky-cta .btn {
+        min-height: 44px;
+        color: var(--paper);
+        border-color: var(--paper);
+        padding: 10px 22px;
+        white-space: nowrap;
+      }
+
+      .sticky-cta .btn:hover {
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .sticky-cta .btn.fill {
+        color: var(--ink);
+        background: var(--accent);
+        border-color: var(--accent);
+      }
+
+      .sticky-cta .btn.fill:hover {
+        background: var(--stone);
+      }
+
+      .section {
+        padding: 96px 0;
+      }
+
+      .section.tight {
+        padding: 72px 0;
+      }
+
+      .section.stone {
+        background: var(--stone);
+      }
+
+      .section.mist {
+        background: var(--mist);
+      }
+
+      .section.dark {
+        background: var(--charcoal);
+        color: var(--paper);
+      }
+
+      .wrap {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        position: relative;
+        min-height: 720px;
+        padding: 92px 0 58px;
+        display: flex;
+        align-items: stretch;
+        background:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.9) 42%, rgba(255, 255, 255, 0.18) 72%),
+          url("https://streamlinecarports.kiwi/wp-content/uploads/2024/01/double-carport.png") right 16% center / min(820px, 62vw) auto no-repeat,
+          var(--paper);
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background: var(--line);
+      }
+
+      .hero-grid {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.65fr);
+        gap: 52px;
+        align-items: end;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin: 0 0 22px;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 34px;
+        height: 2px;
+        background: var(--ink);
+        transform: skewY(-20deg);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin-bottom: 24px;
+        font-size: clamp(48px, 7vw, 94px);
+        line-height: 0.95;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        font-size: clamp(34px, 5vw, 64px);
+        line-height: 1;
+      }
+
+      h3 {
+        margin-bottom: 12px;
+        font-size: clamp(22px, 3vw, 34px);
+        line-height: 1.08;
+      }
+
+      .lead {
+        max-width: 720px;
+        color: var(--muted);
+        font-size: clamp(18px, 2vw, 24px);
+        line-height: 1.42;
+      }
+
+      .hero-copy .lead {
+        margin-bottom: 30px;
+      }
+
+      .hero-proof {
+        align-self: end;
+        border-left: 6px solid var(--accent);
+        background: rgba(255, 255, 255, 0.86);
+        padding: 26px 30px;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+      }
+
+      .hero-proof strong {
+        display: block;
+        font-size: 42px;
+        line-height: 1;
+      }
+
+      .hero-proof span {
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .proof-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1px;
+        background: var(--line);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .proof-item {
+        background: var(--paper);
+        padding: 28px;
+      }
+
+      .proof-item strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 24px;
+      }
+
+      .proof-item span {
+        color: var(--muted);
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.8fr);
+        gap: 70px;
+        align-items: center;
+      }
+
+      .wide-copy {
+        max-width: 780px;
+      }
+
+      .line-list {
+        margin: 26px 0 0;
+        padding: 0;
+        list-style: none;
+        border-top: 1px solid var(--line);
+      }
+
+      .line-list li {
+        display: grid;
+        grid-template-columns: 20px 1fr;
+        gap: 12px;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--line);
+        color: var(--charcoal);
+      }
+
+      .line-list li::before {
+        content: "";
+        width: 9px;
+        height: 9px;
+        margin-top: 8px;
+        background: var(--accent);
+      }
+
+      .image-panel {
+        position: relative;
+        border: 1px solid var(--line);
+        background: var(--paper);
+        padding: 18px;
+      }
+
+      .image-panel img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: contain;
+        background: var(--mist);
+      }
+
+      .image-panel .caption {
+        margin: 14px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .project-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .project-shot {
+        position: relative;
+        min-height: 190px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: var(--charcoal);
+        color: var(--paper);
+      }
+
+      .project-shot.featured {
+        grid-column: 1 / -1;
+        min-height: 320px;
+      }
+
+      .project-shot img {
+        width: 100%;
+        height: 100%;
+        min-height: inherit;
+        object-fit: cover;
+        transition: transform 0.35s ease;
+      }
+
+      .project-shot:hover img {
+        transform: scale(1.035);
+      }
+
+      .project-shot span {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .project-shot strong,
+      .project-shot em {
+        background: rgba(0, 0, 0, 0.78);
+        padding: 7px 9px;
+        font-style: normal;
+      }
+
+      .project-shot strong {
+        font-size: 14px;
+      }
+
+      .project-shot em {
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.72fr) minmax(280px, 0.55fr);
+        gap: 42px;
+        align-items: end;
+        margin-bottom: 42px;
+      }
+
+      .section-head p {
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 20px;
+      }
+
+      .type-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+      }
+
+      .type-card {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        border: 1px solid var(--line);
+        background: var(--paper);
+        transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .type-card:hover,
+      .type-card:focus-visible {
+        border-color: var(--ink);
+        box-shadow: 0 18px 42px rgba(0, 0, 0, 0.08);
+        transform: translateY(-2px);
+        outline: none;
+      }
+
+      .type-card figure {
+        margin: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .type-card figure img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      .type-body {
+        padding: 30px;
+      }
+
+      .type-body p {
+        color: var(--muted);
+      }
+
+      .size-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 20px;
+      }
+
+      .size-pills span {
+        border: 1px solid var(--line);
+        background: var(--mist);
+        padding: 8px 10px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .materials-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.8fr) minmax(340px, 0.78fr);
+        gap: 52px;
+        align-items: center;
+      }
+
+      .feature-stack {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1px;
+        background: var(--line);
+        border: 1px solid var(--line);
+      }
+
+      .feature {
+        min-height: 176px;
+        background: var(--paper);
+        padding: 26px;
+      }
+
+      .feature .number {
+        display: block;
+        margin-bottom: 18px;
+        color: var(--signal);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .feature p {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .design-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 0.74fr) minmax(0, 0.86fr);
+        gap: 46px;
+        align-items: start;
+      }
+
+      .design-layout aside {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .design-layout aside h2,
+      .design-layout aside h3,
+      .design-layout aside .lead,
+      .design-layout aside .line-list {
+        margin-bottom: 0;
+      }
+
+      .audience-toggle {
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr;
+        border: 2px solid var(--ink);
+        margin-top: 18px;
+      }
+
+      .audience-toggle button {
+        border: 0;
+        background: transparent;
+        padding: 13px 18px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .audience-toggle button.active {
+        background: var(--ink);
+        color: var(--paper);
+      }
+
+      .option-board {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1px;
+        background: var(--line);
+        border: 1px solid var(--line);
+      }
+
+      .option-row {
+        display: block;
+        min-height: 168px;
+        padding: 24px;
+        background: var(--paper);
+      }
+
+      .option-row strong {
+        display: block;
+        margin-bottom: 12px;
+        font-size: 18px;
+      }
+
+      .option-row p {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .swatches {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .swatch {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid var(--line);
+        background: var(--paper);
+        padding: 8px 10px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .swatch i {
+        width: 18px;
+        height: 18px;
+        border: 1px solid rgba(0, 0, 0, 0.24);
+        display: inline-block;
+      }
+
+      .applications {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1px;
+        background: rgba(255, 255, 255, 0.24);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+      }
+
+      .application {
+        min-height: 176px;
+        padding: 24px;
+        background: var(--charcoal);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .application strong {
+        display: block;
+        margin-bottom: 12px;
+        font-size: 22px;
+      }
+
+      .application p {
+        margin-bottom: 0;
+        color: rgba(255, 255, 255, 0.74);
+      }
+
+      .path-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+      }
+
+      .path {
+        border: 1px solid var(--line);
+        background: var(--paper);
+        padding: 36px;
+      }
+
+      .path p {
+        color: var(--muted);
+      }
+
+      .path ul {
+        margin: 22px 0 30px;
+        padding-left: 18px;
+        color: var(--charcoal);
+      }
+
+      .path li + li {
+        margin-top: 8px;
+      }
+
+      .faq-layout {
+        display: grid;
+        grid-template-columns: minmax(280px, 0.45fr) minmax(0, 0.95fr);
+        gap: 54px;
+        align-items: start;
+      }
+
+      .faq-list {
+        border-top: 1px solid var(--line);
+      }
+
+      .faq-item {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .faq-question {
+        width: 100%;
+        border: 0;
+        background: transparent;
+        color: var(--ink);
+        display: grid;
+        grid-template-columns: 1fr 32px;
+        gap: 18px;
+        align-items: center;
+        padding: 24px 0;
+        text-align: left;
+        font-weight: 700;
+        font-size: 22px;
+        cursor: pointer;
+      }
+
+      .faq-icon {
+        width: 30px;
+        height: 30px;
+        border: 2px solid var(--ink);
+        display: grid;
+        place-items: center;
+        line-height: 1;
+      }
+
+      .faq-answer {
+        color: var(--muted);
+        font-size: 17px;
+        max-width: 780px;
+        padding: 0 0 24px;
+      }
+
+      .newsletter {
+        display: grid;
+        grid-template-columns: minmax(0, 0.85fr) minmax(280px, 0.56fr);
+        gap: 42px;
+        align-items: center;
+      }
+
+      .newsletter h2 {
+        margin-bottom: 12px;
+      }
+
+      .newsletter p {
+        color: rgba(255, 255, 255, 0.72);
+        margin-bottom: 0;
+      }
+
+      .signup {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .signup input {
+        min-width: 0;
+        border: 0;
+        background: transparent;
+        color: var(--paper);
+        padding: 17px 18px;
+      }
+
+      .signup input::placeholder {
+        color: rgba(255, 255, 255, 0.58);
+      }
+
+      .signup button {
+        border: 0;
+        border-left: 1px solid rgba(255, 255, 255, 0.4);
+        background: var(--accent);
+        padding: 0 24px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .footer {
+        background: #171715;
+        color: var(--paper);
+        padding: 44px 0;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 28px;
+        align-items: center;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 14px;
+      }
+
+      .footer-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .footer-cta a {
+        color: var(--paper);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        font-weight: 700;
+      }
+
+      @media (max-width: 980px) {
+        .page {
+          padding-bottom: 132px;
+        }
+
+        .header-inner {
+          grid-template-columns: 150px 1fr auto;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .mobile-menu {
+          display: block;
+        }
+
+        .sticky-cta-inner {
+          min-height: 132px;
+          grid-template-columns: 1fr;
+          gap: 12px;
+          padding: 16px 0;
+        }
+
+        .sticky-cta .button-row {
+          width: 100%;
+        }
+
+        .hero {
+          min-height: auto;
+          padding: 74px 0 48px;
+          background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.88) 46%, rgba(255, 255, 255, 0.44) 100%),
+            url("https://streamlinecarports.kiwi/wp-content/uploads/2024/01/double-carport.png") right bottom 24px / 680px auto no-repeat,
+            var(--paper);
+        }
+
+        .hero-grid,
+        .split,
+        .section-head,
+        .materials-grid,
+        .design-layout,
+        .faq-layout,
+        .newsletter {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-proof {
+          max-width: 420px;
+          margin-top: 220px;
+        }
+
+        .proof-grid,
+        .applications {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 720px) {
+        .page {
+          padding-bottom: 156px;
+        }
+
+        .header-inner {
+          min-height: 76px;
+          grid-template-columns: 132px 1fr;
+        }
+
+        .header-inner > .btn {
+          display: none;
+        }
+
+        .brand img {
+          width: 130px;
+        }
+
+        .section,
+        .section.tight {
+          padding: 62px 0;
+        }
+
+        .sticky-cta-inner {
+          min-height: 156px;
+          gap: 10px;
+        }
+
+        .sticky-cta .button-row {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 8px;
+        }
+
+        .sticky-cta .btn {
+          min-height: 46px;
+          padding: 9px 10px;
+          white-space: normal;
+          text-align: center;
+          font-size: 13px;
+        }
+
+        .hero {
+          padding-top: 54px;
+          background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.92) 58%, rgba(255, 255, 255, 0.7) 100%),
+            url("https://streamlinecarports.kiwi/wp-content/uploads/2024/01/double-carport.png") center bottom 26px / 560px auto no-repeat,
+            var(--paper);
+        }
+
+        .hero-proof {
+          margin-top: 170px;
+          padding: 22px;
+        }
+
+        .proof-grid,
+        .type-grid,
+        .feature-stack,
+        .applications,
+        .path-grid,
+        .option-board,
+        .project-gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .project-shot,
+        .project-shot.featured {
+          min-height: 245px;
+        }
+
+        .signup,
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .signup button {
+          min-height: 52px;
+          border-left: 0;
+          border-top: 1px solid rgba(255, 255, 255, 0.4);
+        }
+      }
