@@ -89,7 +89,7 @@ import { useState } from "react";
         resellers: {
           title: "For resellers and trade partners",
           body: "Give trade customers a faster way to qualify projects by size, consent pathway, engineered kitset requirements and delivery options before moving into a wholesale quote.",
-          bullets: ["Standard SKUs plus custom quote prompts", "PurlinDek talking points for premium positioning", "NZ-wide freight, depot collection and project support cues"],
+          bullets: ["Standard SKUs plus custom quote prompts", "PurlinDek talking points for premium positioning", "NZ-wide freight via Mainfreight depot collection and project support cues"],
           cta: "Become a reseller",
         },
       };
@@ -138,7 +138,7 @@ import { useState } from "react";
         {
           question: "How are kitset carports delivered?",
           answer:
-            "Streamline carports are supplied in kitset packs and can be freighted NZ-wide. Options include factory collection in Palmerston North, collection from a Mainfreight depot, or home delivery where a HIAB can unload the large pallet safely.",
+            "Streamline carports are supplied in kitset packs and can be freighted NZ-wide. Options include factory collection in Palmerston North or delivery to your nearest Mainfreight depot for convenient local pick-up.",
         },
         {
           question: "Can resellers quote custom carport projects?",
@@ -196,7 +196,8 @@ import { useState } from "react";
               <div className="hero-grid">
                 <div className="hero-copy">
                   <p className="eyebrow">Customise your carport solution</p>
-                  <h1>Carports for Sale NZ: Single & Double Kitsets</h1>
+                  <h2 className="hero-display">Strong, clean shelter — built to your site.</h2>
+                  <h1 className="hero-seo">Carports for Sale NZ: Single & Double Kitsets</h1>
                   <p className="lead">
                     Select a single or double footprint, then tailor the carport dimensions, height, colour, trim and light options for your home, bach, business or reseller project.
                   </p>
@@ -222,7 +223,7 @@ import { useState } from "react";
               </div>
               <div className="proof-item">
                 <strong>Kitset delivery</strong>
-                <span>Freighted NZ-wide with collection and HIAB options.</span>
+                <span>Freighted NZ-wide with Mainfreight depot collection available.</span>
               </div>
             </div>
           </>
@@ -445,7 +446,7 @@ import { useState } from "react";
                 <ul>
                   <li>Standard kitset sizes with custom design support.</li>
                   <li>Cleaner install story: fewer purlins, fewer fixings, less visual clutter.</li>
-                  <li>NZ-wide freight via factory, depot or HIAB delivery pathways.</li>
+                  <li>NZ-wide freight via factory collection or Mainfreight depot delivery.</li>
                 </ul>
                 <div className="button-row">
                   <a className="btn fill" href="https://streamlinecarports.kiwi/become-a-reseller/">Become a reseller</a>
