@@ -196,8 +196,8 @@ import { useState } from "react";
               <div className="hero-grid">
                 <div className="hero-copy">
                   <p className="eyebrow">Customise your carport solution</p>
-                  <h2 className="hero-display">Strong, clean shelter built for your site.</h2>
-                  <h1 className="hero-seo">Single & Double Carport Kitsets for NZ Homes</h1>
+                  <h2 className="hero-display">Your carport, built to fit.</h2>
+                  <h1 className="hero-seo">Single & Double Kitsets for NZ homes</h1>
                   <p className="lead">
                     Select a single or double footprint, then tailor the carport dimensions, height, colour, trim and light options for your home, bach, business or reseller project.
                   </p>
